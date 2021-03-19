@@ -1,0 +1,49 @@
+ <!--index.ejs file-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+  
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+            ul li{
+            
+            font-family: 'Parisienne', cursive;
+
+            }
+
+    </style>
+    
+    </head>
+
+    <body>
+    <h1>Name of User</h1>
+
+    <section>
+        <ul>
+                <% for(let user of users){ %>
+                <% if(user.name == undefined) { %>
+                <li>bad data</li>
+                <% } else if(user.age == undefined){ %>
+                
+                <li>Name: <%= user.name %> ,Age:Age missing ,Hobbies:<%= user.hobbies %></li>
+                    <%} else if(user.hobbies == undefined){ %>
+                    
+                <li>Name: <%= user.name %> ,Age:<%= user.age %> ,Hobbies:hobbies missing</li>
+                    <% }else {%>
+                <li>Name: <%= user.name %> ,Age:<%= user.age %> ,Hobbies:<%= user.hobbies %></li>
+                    <% } %>
+                    <% }%>
+        </ul>
+    </section>
+
+        <footer>
+
+          
+            
+        </footer>
+    </body>
+</html>
